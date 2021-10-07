@@ -1,0 +1,55 @@
+{
+  "name": "A",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "UUID",
+      "fieldValidateRules": ["required", "unique"]
+    },
+    {
+      "fieldName": "groupId",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "firstName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "phoneNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "hireDate",
+      "fieldType": "Instant"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "b",
+      "otherEntityRelationshipName": "a",
+      "relationshipName": "groupId"
+    }
+  ],
+  "entityTableName": "a",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["coub"],
+  "microserviceName": "coub",
+  "clientRootFolder": "coub",
+  "databaseType": "sql",
+  "changelogDate": "20211007120059"
+}

@@ -1,0 +1,32 @@
+application {
+  config {
+    baseName coub,
+    applicationType microservice,
+    packageName com.sem.coub,
+    authenticationType jwt,
+    prodDatabaseType mysql,
+  }
+  entities *
+}
+
+entity A {
+	id UUID required unique,
+	groupId UUID,
+	firstName String,
+	lastName String,
+	email String,
+	phoneNumber String,
+	hireDate Instant
+}
+
+entity B {
+	id UUID required unique,
+	group String,
+	startSate Instant
+}
+
+
+relationship OneToMany {
+  A{groupId} to B
+}
+    

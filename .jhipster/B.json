@@ -1,0 +1,39 @@
+{
+  "name": "B",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "UUID",
+      "fieldValidateRules": ["required", "unique"]
+    },
+    {
+      "fieldName": "group",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "startSate",
+      "fieldType": "Instant"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "a",
+      "otherEntityRelationshipName": "groupId",
+      "relationshipName": "a"
+    }
+  ],
+  "entityTableName": "b",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["coub"],
+  "microserviceName": "coub",
+  "clientRootFolder": "coub",
+  "databaseType": "sql",
+  "changelogDate": "20211007120159"
+}
